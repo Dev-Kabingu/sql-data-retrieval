@@ -1,0 +1,13 @@
+SELECT  first_name,last_name,date_of_birth FROM patients;
+select provider_id,first_name,provider_specialty from providers;
+select first_name from patients WHERE first_name LIKE  "Ab%";
+select * from providers where provider_specialty like "%y";
+select * from patients where date_of_birth > '1980-01-01';
+select * from ed_visits where acuity >=2;
+select * from patients where language='spanish';
+select * from  ed_visits where reason_for_visit ='Migraine' AND disposition='Admitted';
+select * from patients where date_of_birth between '1975' AND '1980';
+select first_name,last_name AS full_name from patients ORDER BY full_name ASC;
+select * from visits Order by date_of_visit DESC;
+select * from admissions where primary_diagnosis='stroke' AND discharge_disposition='home';
+select * from discharges where discharge_disposition='home' AND discharge_date BETWEEN '2018-03-01' AND '2018-03-07';
